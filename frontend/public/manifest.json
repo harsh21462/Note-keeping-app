@@ -1,0 +1,16 @@
+{
+  "short_name": "NoteKeeper",
+  "name": "NoteKeeper App",
+  "description": "A note taking application for your daily needs.",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/duxhnzvyw/image/upload/v1706238450/2024%20Portfolio%20Website%20Assets/list_ez8dzc.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

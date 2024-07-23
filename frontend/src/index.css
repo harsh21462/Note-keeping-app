@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 30px;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li a:hover {
+  color: #777;
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.heading .username {
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.heading p {
+  color: #828282;
+}
+
+.notes {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.note {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+}
+
+.note h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  /* Dark gray text color */
+}
+
+.note h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.note hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.close {
+  background-color: #f5ba13;
+  border: 2px solid #f5ba13;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.close:hover {
+  background-color: #fff;
+  color: #f5ba13;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  outline-color: #6fa0e8;
+  /* Light blue outline color */
+  transition: outline-color 0.3s ease-in-out;
+  /* Add smooth transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline-color: #007bff;
+  /* Darker blue outline color on focus */
+}
+
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  /* Blue border */
+  border-radius: 5px;
+  background: #007bff;
+  /* Blue background */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-reverse {
+  background: #fff;
+  color: #007bff;
+  /* Blue text */
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+  border-color: #0056b3;
+  transform: scale(0.98);
+}
+
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .header {
+    padding: 5px 0;
+    margin-bottom: 15px;
+  }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .heading h1 {
+    font-size: 1.25rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+  }
+
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+  }
+
+  .note {
+    padding: 5px;
+    width: 150px;
+    margin: 5px;
+    float: left;
+  }
+
+  .note h2 {
+    font-size: 1rem;
+  }
+
+  .note h4 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 727px) {
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 75%;
+  }
+
+  .header {
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+
+  .notes {
+    display: grid;
+    place-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 10px; */
+  }
+
+  .note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 7px;
+    width: 225px;
+    margin: 8px auto;
+    float: left;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 727px) {
+  .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .note {
+    padding: 7px;
+    margin: 8px auto;
+    float: left;
+  }
+}
+
+@media (min-width: 728px) and (max-width: 845px) {
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
